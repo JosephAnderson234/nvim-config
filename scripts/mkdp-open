@@ -1,0 +1,4 @@
+#!/bin/sh
+# Used by markdown-preview.nvim under WSL to open the preview in the
+# Windows browser, since WSL has no xdg-open/wslview by default.
+explorer.exe "$1" >/dev/null 2>&1 || cmd.exe /c start "" "$1"
